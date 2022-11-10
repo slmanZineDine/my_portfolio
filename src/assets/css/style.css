@@ -1,0 +1,236 @@
+:root {
+  --biggest-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+}
+
+/*===================== BASE =====================*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #1d1d1d;
+  color: #fff;
+  height: 5000px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+button,
+input {
+  border: none;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+/*=============== REUSEABLE CLASSES ===============*/
+.container {
+  padding: 0 15px;
+  margin-inline: auto;
+  padding-left: 230px;
+}
+
+.main-content {
+  display: flex;
+}
+.main-content .main {
+  flex: 1;
+}
+
+.section {
+  padding-block: 3rem;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* EXTRA SMALL */
+/* SMALL */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* MEDIUM */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* LARGE */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/*===================== ASIDE =====================*/
+.aside {
+  position: fixed;
+  width: 230px;
+  height: 100vh;
+  text-align: center;
+  background-color: #181818;
+  z-index: 100;
+}
+.aside .nav .logo {
+  padding: 1.2rem;
+  background-color: #000;
+}
+.aside .nav .logo img {
+  width: 100px;
+}
+.aside .nav .logo .title {
+  margin-block: 0.7rem;
+  font-size: 1.8rem;
+  letter-spacing: -2px;
+}
+.aside .nav .logo .text {
+  color: #909096;
+  font-size: var(--normal-font-size);
+}
+.aside .nav .links .item .link {
+  display: block;
+  padding: 1.2rem;
+  border-bottom: 1px solid #909096;
+  color: #909096;
+  transition: color 0.4s;
+}
+.aside .nav .links .item .link:hover {
+  color: #08fdd8;
+}
+.aside .nav .social {
+  padding-top: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+}
+.aside .nav .social .social-link {
+  font-size: 1.5rem;
+  transition: color 0.4s;
+}
+.aside .nav .social .social-link:not(:last-of-type) {
+  border-right: 1px solid #909096;
+}
+.aside .nav .social .social-link:nth-child(1):hover {
+  color: #0674e7;
+}
+.aside .nav .social .social-link:nth-child(2):hover {
+  color: #0a66c2;
+}
+.aside .nav .social .social-link:nth-child(3):hover {
+  color: #f00;
+}
+.aside .nav .social .social-link:nth-child(4):hover {
+  color: #ddd;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* EXTRA SMALL */
+/*===================== HERO =====================*/
+.hero {
+  height: 100vh;
+}
+.hero .container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  overflow-x: hidden;
+}
+.hero .container .content .title {
+  font-size: 5rem;
+  letter-spacing: -7px;
+  line-height: 1;
+  margin-bottom: 0;
+}
+.hero .container .content .title .first-letter {
+  display: inline-block;
+  width: 60px;
+  margin-right: -1.7rem;
+  position: relative;
+  top: 0.2rem;
+}
+.hero .container .content .text {
+  color: #909096;
+  letter-spacing: 5px;
+  margin-block: 1rem 3rem;
+  font-size: var(--h3-font-size);
+}
+.hero .container .content .download-btn {
+  position: relative;
+  border: 1px solid #08fdd8;
+  padding: 1rem 2rem;
+  color: #08fdd8;
+  letter-spacing: 2px;
+  background-color: transparent;
+  transition: color 0.4s;
+}
+.hero .container .content .download-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 100%;
+  width: 0;
+  background-color: #08fdd8;
+  z-index: -1;
+  transition: width 1s;
+}
+.hero .container .content .download-btn::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 10px;
+  bottom: 0;
+  right: 0;
+  background-color: #08fdd8;
+  transition: background 0.4s;
+}
+.hero .container .content .download-btn:hover {
+  color: #1d1d1d;
+}
+.hero .container .content .download-btn:hover::before {
+  width: 100%;
+}
+.hero .container .content .download-btn:hover::after {
+  background-color: #fff;
+}
+.hero .container .personal-img {
+  align-self: flex-start;
+}
+.hero .container .personal-img img {
+  width: 300px;
+  border-radius: 50%;
+  box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+}/*# sourceMappingURL=style.css.map */

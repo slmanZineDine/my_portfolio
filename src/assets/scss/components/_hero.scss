@@ -1,0 +1,83 @@
+@use "../abstracts/" as *;
+/*===================== HERO =====================*/
+.hero {
+   height: 100vh;
+   .container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 2rem;
+      overflow-x: hidden;
+      .content {
+         .title {
+            font-size: 5rem;
+            letter-spacing: -7px;
+            line-height: 1;
+            margin-bottom: 0;
+            .first-letter {
+               display: inline-block;
+               width: 60px;
+               margin-right: -1.7rem;
+               position: relative;
+               top: 0.2rem;
+            }
+         }
+         .text {
+            color: $text-color;
+            letter-spacing: 5px;
+            margin-block: 1rem 3rem;
+            font-size: var(--h3-font-size);
+         }
+         .download-btn {
+            position: relative;
+            border: 1px solid $hover-color;
+            padding: 1rem 2rem;
+            color: $hover-color;
+            letter-spacing: 2px;
+            background-color: transparent;
+            transition: color 0.4s;
+            &::before {
+               content: "";
+               position: absolute;
+               top: 0;
+               left: 0;
+               display: block;
+               height: 100%;
+               width: 0;
+               background-color: $hover-color;
+               //    transform: skewX(-30deg);
+               z-index: -1;
+               transition: width 1s;
+            }
+            &::after {
+               content: "";
+               position: absolute;
+               display: block;
+               width: 10px;
+               height: 10px;
+               bottom: 0;
+               right: 0;
+               background-color: $hover-color;
+               transition: background 0.4s;
+            }
+            &:hover {
+               color: $body-bg;
+               &::before {
+                  width: 100%;
+               }
+               &::after {
+                  background-color: #fff;
+               }
+            }
+         }
+      }
+      .personal-img {
+         align-self: flex-start;
+         img {
+            width: 300px;
+            border-radius: 50%;
+            box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+         }
+      }
+   }
+}

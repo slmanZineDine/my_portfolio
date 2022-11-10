@@ -1,0 +1,38 @@
+@use "./../abstracts" as *;
+/*=============== REUSEABLE CLASSES ===============*/
+.container {
+   padding: 0 15px;
+   margin-inline: auto;
+   padding-left: calc($aside-padding);
+}
+.main-content {
+   display: flex;
+   .main {
+      flex: 1;
+   }
+}
+.section {
+   padding-block: 3rem;
+}
+/*=============== BREAKPOINTS ===============*/
+/* EXTRA SMALL */
+@media (max-width: 576px) {
+}
+/* SMALL */
+@media (min-width: 768px) {
+   .container {
+      width: 750px;
+   }
+}
+/* MEDIUM */
+@media (min-width: 992px) {
+   .container {
+      width: 970px;
+   }
+}
+/* LARGE */
+@media (min-width: 1200px) {
+   .container {
+      width: 1170px;
+   }
+}
