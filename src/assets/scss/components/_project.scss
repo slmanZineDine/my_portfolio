@@ -1,0 +1,22 @@
+@use "../abstracts/" as *;
+/*===================== PROJECT =====================*/
+.header-project {
+   text-align: center;
+   padding: 1.5rem;
+}
+.project {
+   .container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding-left: 15px;
+      .project-img {
+         width: 100%;
+      }
+   }
+   ul {
+      list-style: initial;
+   }
+}

@@ -12,7 +12,7 @@
          padding: 1.2rem;
          background-color: #000;
          img {
-            width: 100px;
+            width: 80px;
          }
          .title {
             margin-block: 0.7rem;
@@ -28,7 +28,7 @@
          .item {
             .link {
                display: block;
-               padding: 1.2rem;
+               padding: 1rem;
                border-bottom: 1px solid $text-color;
                color: $text-color;
                transition: color 0.4s;
@@ -38,28 +38,36 @@
             }
          }
       }
-      .social {
-         padding-top: 1.2rem;
-         display: grid;
-         grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
-         .social-link {
-            font-size: 1.5rem;
-            transition: color 0.4s;
+      .social-links {
+         .title {
+            text-align: left;
+            color: #fff;
+            font-size: var(--h2-font-size);
+            padding-block: 1.2rem;
+            padding-left: 0.5rem;
          }
-         .social-link:not(:last-of-type) {
-            border-right: 1px solid $text-color;
-         }
-         .social-link:nth-child(1):hover {
-            color: #0674e7;
-         }
-         .social-link:nth-child(2):hover {
-            color: #0a66c2;
-         }
-         .social-link:nth-child(3):hover {
-            color: #f00;
-         }
-         .social-link:nth-child(4):hover {
-            color: #ddd;
+         .social {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+            .social-link {
+               font-size: 1.5rem;
+               transition: color 0.4s;
+            }
+            .social-link:not(:last-of-type) {
+               border-right: 1px solid $text-color;
+            }
+            .social-link:nth-child(1):hover {
+               color: #0674e7;
+            }
+            .social-link:nth-child(2):hover {
+               color: #0a66c2;
+            }
+            .social-link:nth-child(3):hover {
+               color: #f00;
+            }
+            .social-link:nth-child(4):hover {
+               color: #ddd;
+            }
          }
       }
    }
@@ -75,11 +83,11 @@
 //    }
 // }
 // /* MEDIUM */
-// @media (min-width: 992px) {
-//    .container {
-//       width: 970px;
-//    }
-// }
+@media (max-width: 992px) {
+   .aside {
+      display: none;
+   }
+}
 // /* LARGE */
 // @media (min-width: 1200px) {
 //    .container {

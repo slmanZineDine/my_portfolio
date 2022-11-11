@@ -34,8 +34,10 @@
             padding: 1rem 2rem;
             color: $hover-color;
             letter-spacing: 2px;
+            text-transform: uppercase;
             background-color: transparent;
             transition: color 0.4s;
+            overflow-x: hidden;
             &::before {
                content: "";
                position: absolute;
@@ -45,7 +47,7 @@
                height: 100%;
                width: 0;
                background-color: $hover-color;
-               //    transform: skewX(-30deg);
+               transform: translateX(-20px) skewX(-15deg);
                z-index: -1;
                transition: width 1s;
             }
@@ -58,12 +60,12 @@
                bottom: 0;
                right: 0;
                background-color: $hover-color;
-               transition: background 0.4s;
+               transition: background 0.3s;
             }
             &:hover {
                color: $body-bg;
                &::before {
-                  width: 100%;
+                  width: 120%;
                }
                &::after {
                   background-color: #fff;
@@ -76,7 +78,8 @@
          img {
             width: 300px;
             border-radius: 50%;
-            box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+            // box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+            border: 5px solid #fff;
          }
       }
    }

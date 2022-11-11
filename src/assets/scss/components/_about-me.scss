@@ -1,0 +1,19 @@
+@use "../abstracts/" as *;
+
+/*===================== ABOUT ME =====================*/
+.about-me {
+   .text {
+      line-height: 1.5;
+      width: 70%;
+   }
+   .text:nth-child(3) {
+      margin-block: 2rem;
+   }
+   .link {
+      color: $hover-color;
+      transition: color 0.4s;
+      &:hover {
+         color: #08fdd87d;
+      }
+   }
+}

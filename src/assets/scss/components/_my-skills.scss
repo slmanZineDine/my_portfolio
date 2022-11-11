@@ -1,0 +1,19 @@
+@use "../abstracts/" as *;
+/*===================== MY SKILLS =====================*/
+.my-skills {
+   .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 2rem;
+      svg {
+         transition: transform 0.3s;
+         &:hover {
+            transform: scale(1.1);
+         }
+      }
+      .title {
+         text-align: center;
+         margin-top: 0.5rem;
+      }
+   }
+}
