@@ -274,9 +274,33 @@
                      the form.
                   </div>
                   <form action="" class="form">
-                     <input type="text" name="name" id="name" />
-                     <input type="email" name="email" id="email" />
-                     <input type="text" name="subject" id="subject" />
+                     <div class="input input__name">
+                        <input
+                           type="text"
+                           name="name"
+                           id="name"
+                           class="input-field"
+                        />
+                        <span class="input-title">Name</span>
+                     </div>
+                     <div class="input input__email">
+                        <input
+                           type="email"
+                           name="email"
+                           id="email"
+                           class="input-field"
+                        />
+                        <span class="input-title">Email</span>
+                     </div>
+                     <div class="input input__subject">
+                        <input
+                           type="text"
+                           name="subject"
+                           id="subject"
+                           class="input-field"
+                        />
+                        <span class="input-title">Subject</span>
+                     </div>
                      <textarea
                         name="message"
                         id="message"
@@ -290,5 +314,6 @@
             </section>
          </main>
       </div>
+      <script src="./src/assets/js/script.js"></script>
    </body>
 </html>

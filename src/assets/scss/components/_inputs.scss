@@ -1,0 +1,36 @@
+@use "../abstracts/" as *;
+/*===================== INPUTS =====================*/
+.input {
+   position: relative;
+   .input-field {
+      padding: 1rem;
+      width: 100%;
+      border: 2px solid $text-color;
+      caret-color: $hover-color;
+      color: $text-color;
+      background-color: $body-bg;
+      background-color: transparent;
+   }
+   .input-title {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 60px;
+      transform: translate(1.5rem, -50%);
+      color: $text-color;
+      transition: all 0.3s;
+      z-index: -1;
+   }
+   .input-field:focus {
+      border: 2px solid $hover-color;
+      & + .input-title {
+         text-align: center;
+         top: 0;
+         left: 0;
+         background-color: $body-bg;
+         color: $hover-color;
+         font-size: var(--normal-font-size);
+         z-index: 1;
+      }
+   }
+}
