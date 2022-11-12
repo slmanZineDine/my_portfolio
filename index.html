@@ -28,10 +28,18 @@
                   <p class="text">Web Developer</p>
                </div>
                <ul class="links">
-                  <li class="item"><a href="" class="link">About Me</a></li>
-                  <li class="item"><a href="" class="link">My Skills</a></li>
-                  <li class="item"><a href="" class="link">My Works</a></li>
-                  <li class="item"><a href="" class="link">Contact</a></li>
+                  <li class="item">
+                     <a href="#about" class="link">About Me</a>
+                  </li>
+                  <li class="item">
+                     <a href="#my-skills" class="link">My Skills</a>
+                  </li>
+                  <li class="item">
+                     <a href="#my-works" class="link">My Works</a>
+                  </li>
+                  <li class="item">
+                     <a href="#contact" class="link">Contact</a>
+                  </li>
                </ul>
                <div class="social-links">
                   <h2 class="title">Follow me on:</h2>
@@ -83,7 +91,12 @@
                         Web Developer
                      </h1>
                      <p class="text">Front End Developer</p>
-                     <button class="download-btn">Download CV</button>
+                     <a
+                        href="src/files/my-cv.pdf"
+                        download="my-cv.pdf"
+                        class="download-btn btn"
+                        >Download CV</a
+                     >
                   </div>
                   <div class="personal-img">
                      <img
@@ -94,14 +107,14 @@
                </div>
             </section>
             <!-- ===================== ABOUT ME ===================== -->
-            <section class="about-me section">
+            <section class="about-me section" id="about">
                <div class="container">
                   <h2 class="section__title">About Me</h2>
                   <p class="text">
-                     I'm a Front-End Developer. I'm 25 years old with 3 years
-                     experience build projects and self learning.I love turning
+                     I'm a Front-End Developer. I'm 25 years old with 3 years of
+                     experience build projects and self-learning. I love turning
                      UI/UX designs into usable websites that respond to various
-                     devices.
+                     devices. Help companies to build complex web applications.
                   </p>
                   <p class="text">
                      I always seek perfection to make my projects unique and
@@ -113,7 +126,7 @@
                </div>
             </section>
             <!-- ===================== MY SKILLS ===================== -->
-            <section class="my-skills section">
+            <section class="my-skills section" id="my-skills">
                <div class="container">
                   <h2 class="section__title">My Skills</h2>
                   <div class="skills">
@@ -231,7 +244,7 @@
                </div>
             </section>
             <!-- ===================== MY WORKS ===================== -->
-            <section class="my-works section">
+            <section class="my-works section" id="my-works">
                <div class="container">
                   <h2 class="section__title">My Works</h2>
                   <div class="works">
@@ -251,9 +264,28 @@
                </div>
             </section>
             <!-- ===================== CONTACT ===================== -->
-            <section class="contact section">
+            <section class="contact section" id="contact">
                <div class="container">
                   <h2 class="section__title">Contact</h2>
+                  <div class="text">
+                     I&#8217;m interested in freelance opportunities &#45;
+                     especially ambitious or large projects. However, if you
+                     have other request or question, don&#8217;t hesitate to use
+                     the form.
+                  </div>
+                  <form action="" class="form">
+                     <input type="text" name="name" id="name" />
+                     <input type="email" name="email" id="email" />
+                     <input type="text" name="subject" id="subject" />
+                     <textarea
+                        name="message"
+                        id="message"
+                        placeholder="Enter your message ..."
+                     ></textarea>
+                     <button id="submit" class="submit-btn btn">
+                        Send message!
+                     </button>
+                  </form>
                </div>
             </section>
          </main>

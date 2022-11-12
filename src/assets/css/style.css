@@ -45,7 +45,8 @@ button {
 }
 
 button,
-input {
+input,
+textarea {
   border: none;
 }
 
@@ -132,6 +133,54 @@ textarea:focus {
     width: 1170px;
   }
 }
+/*===================== BUTTONS =====================*/
+.btn {
+  position: relative;
+  border: 1px solid #08fdd8;
+  padding: 1rem 2rem;
+  color: #08fdd8;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: transparent;
+  transition: color 0.4s;
+  overflow: hidden;
+  display: block;
+  width: fit-content;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 100%;
+  width: 0;
+  background-color: #08fdd8;
+  transform: translateX(-20px) skewX(-15deg);
+  z-index: -1;
+  transition: width 1s;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 10px;
+  bottom: 0;
+  right: 0;
+  background-color: #08fdd8;
+  transition: background 0.3s;
+}
+.btn:hover {
+  color: #1d1d1d;
+}
+.btn:hover::before {
+  width: 120%;
+}
+.btn:hover::after {
+  background-color: #fff;
+}
+
 /*===================== ASIDE =====================*/
 .aside {
   position: fixed;
@@ -214,7 +263,6 @@ textarea:focus {
   align-items: center;
   justify-content: flex-start;
   gap: 2rem;
-  overflow-x: hidden;
 }
 .hero .container .content .title {
   font-size: 5rem;
@@ -234,50 +282,6 @@ textarea:focus {
   letter-spacing: 5px;
   margin-block: 1rem 3rem;
   font-size: var(--h3-font-size);
-}
-.hero .container .content .download-btn {
-  position: relative;
-  border: 1px solid #08fdd8;
-  padding: 1rem 2rem;
-  color: #08fdd8;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  background-color: transparent;
-  transition: color 0.4s;
-  overflow-x: hidden;
-}
-.hero .container .content .download-btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  height: 100%;
-  width: 0;
-  background-color: #08fdd8;
-  transform: translateX(-20px) skewX(-15deg);
-  z-index: -1;
-  transition: width 1s;
-}
-.hero .container .content .download-btn::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 10px;
-  height: 10px;
-  bottom: 0;
-  right: 0;
-  background-color: #08fdd8;
-  transition: background 0.3s;
-}
-.hero .container .content .download-btn:hover {
-  color: #1d1d1d;
-}
-.hero .container .content .download-btn:hover::before {
-  width: 120%;
-}
-.hero .container .content .download-btn:hover::after {
-  background-color: #fff;
 }
 .hero .container .personal-img {
   align-self: flex-start;
@@ -382,7 +386,39 @@ textarea:focus {
   padding: 1rem;
 }
 
-/*===================== CONTACT =====================*/ /*===================== PROJECT =====================*/
+/*===================== CONTACT =====================*/
+.contact .text {
+  line-height: 1.5;
+  width: 70%;
+}
+.contact .form {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+.contact .form #name,
+.contact .form #email {
+  width: 49%;
+}
+.contact .form #subject {
+  width: 100%;
+}
+.contact .form input {
+  padding: 1rem;
+  caret-color: #08fdd8;
+  background-color: #2b2b2b;
+}
+.contact .form textarea {
+  width: 100%;
+  padding: 1rem;
+  resize: vertical;
+  caret-color: #08fdd8;
+  background-color: #2b2b2b;
+  min-height: 150px;
+}
+
+/*===================== PROJECT =====================*/
 .header-project {
   text-align: center;
   padding: 1.5rem;
