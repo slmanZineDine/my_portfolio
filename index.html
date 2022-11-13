@@ -18,7 +18,7 @@
    <body>
       <div class="main-content">
          <!-- ===================== ASIDE ===================== -->
-         <aside class="aside">
+         <aside class="aside" id="aside">
             <nav class="nav">
                <div class="logo">
                   <a href="/index.html">
@@ -75,6 +75,12 @@
          </aside>
          <!-- ===================== MAIN ===================== -->
          <main class="main">
+            <!-- ===================== TOGGLE ===================== -->
+            <div class="toggle-mobile" id="toggle-mobile">
+               <span class="toggle-mobile__span"></span
+               ><span class="toggle-mobile__span"></span
+               ><span class="toggle-mobile__span"></span>
+            </div>
             <!-- ===================== HERO ===================== -->
             <section class="hero main-section">
                <div class="container">
@@ -273,47 +279,66 @@
                      have other request or question, don&#8217;t hesitate to use
                      the form.
                   </div>
-                  <form action="" class="form">
+                  <form action="" id="form" class="form" novalidate>
                      <div class="input input__name">
+                        <span class="input-title">Name</span>
                         <input
                            type="text"
                            name="name"
                            id="name"
                            class="input-field"
+                           autocomplete="off"
                         />
-                        <span class="input-title">Name</span>
                      </div>
                      <div class="input input__email">
+                        <span class="input-title">Email</span>
                         <input
                            type="email"
                            name="email"
                            id="email"
                            class="input-field"
+                           autocomplete="off"
                         />
-                        <span class="input-title">Email</span>
                      </div>
                      <div class="input input__subject">
+                        <span class="input-title">Subject</span>
                         <input
                            type="text"
                            name="subject"
                            id="subject"
                            class="input-field"
+                           autocomplete="off"
                         />
-                        <span class="input-title">Subject</span>
                      </div>
                      <textarea
                         name="message"
                         id="message"
                         placeholder="Enter your message ..."
                      ></textarea>
-                     <button id="submit" class="submit-btn btn">
+                     <button type="submit" id="submit" class="submit-btn btn">
                         Send message!
                      </button>
                   </form>
+                  <div class="info">
+                     <p class="text">
+                        <i class="ri-mail-line icon"></i> Email:
+                        slman.zinedine1@gmail.com
+                     </p>
+                     <p class="text">
+                        <i class="ri-map-pin-line icon"></i> Location: Lattakia,
+                        Syria
+                     </p>
+                  </div>
                </div>
             </section>
          </main>
       </div>
+      <!-- ===================== EMAIL JS ===================== -->
+      <script
+         type="text/javascript"
+         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+      ></script>
+      <!-- ===================== MAIN FILE ===================== -->
       <script src="./src/assets/js/script.js"></script>
    </body>
 </html>

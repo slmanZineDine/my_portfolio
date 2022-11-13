@@ -21,16 +21,18 @@
       transition: all 0.3s;
       z-index: -1;
    }
-   .input-field:focus {
-      border: 2px solid $hover-color;
-      & + .input-title {
-         text-align: center;
-         top: 0;
-         left: 0;
-         background-color: $body-bg;
-         color: $hover-color;
-         font-size: var(--normal-font-size);
-         z-index: 1;
+
+   .input-title.active {
+      text-align: center;
+      top: 0;
+      left: 0;
+      background-color: $body-bg;
+      color: $hover-color;
+      font-size: var(--small-font-size);
+      transform: translate(0.5rem, -50%);
+      z-index: 1;
+      & + .input-field {
+         border: 2px solid $hover-color;
       }
    }
 }

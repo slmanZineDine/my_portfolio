@@ -2,21 +2,24 @@
 /*===================== ASIDE =====================*/
 .aside {
    position: fixed;
+   left: 0;
    width: $aside-padding;
-   height: 100vh;
+   min-height: 100vh;
    text-align: center;
    background-color: $aside-bg;
    z-index: $z-fixed;
+   overflow: hidden;
+   transition: width 0.4s;
    .nav {
       .logo {
          padding: 1.2rem;
          background-color: #000;
          img {
-            width: 80px;
+            width: 60px;
          }
          .title {
             margin-block: 0.7rem;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             letter-spacing: -2px;
          }
          .text {
@@ -73,24 +76,12 @@
    }
 }
 /*=============== BREAKPOINTS ===============*/
-/* EXTRA SMALL */
-// @media (max-width: 576px) {
-// }
 // /* SMALL */
-// @media (min-width: 768px) {
-//    .container {
-//       width: 750px;
-//    }
-// }
-// /* MEDIUM */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
    .aside {
-      display: none;
+      width: 0;
+   }
+   .aside.show {
+      width: 100%;
    }
 }
-// /* LARGE */
-// @media (min-width: 1200px) {
-//    .container {
-//       width: 1170px;
-//    }
-// }

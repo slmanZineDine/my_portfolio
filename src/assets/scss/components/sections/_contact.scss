@@ -3,16 +3,17 @@
 .contact {
    .text {
       line-height: 1.5;
-      width: 70%;
+      width: 80%;
    }
    .form {
       margin-top: 3rem;
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-between;
       gap: 1.5rem;
       .input__name,
       .input__email {
-         width: 48%;
+         flex: 1;
       }
       .input__subject {
          width: 100%;
@@ -29,5 +30,29 @@
       #message:focus {
          border: 2px solid $hover-color;
       }
+   }
+   .info {
+      margin-top: 2rem;
+      .text {
+         display: flex;
+         align-items: center;
+         gap: 1rem;
+         margin-bottom: 0.5rem;
+      }
+      .icon {
+         color: $hover-color;
+         font-size: 1.5rem;
+      }
+   }
+}
+/*=============== BREAKPOINTS ===============*/
+/* SMALL */
+@media (max-width: 768px) {
+   .contact .text {
+      width: 100%;
+   }
+   .contact .form .input__name,
+   .contact .form .input__email {
+      flex-basis: 100%;
    }
 }
