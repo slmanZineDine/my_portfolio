@@ -1,8 +1,26 @@
 @use "../abstracts/" as *;
 /*===================== PROJECT =====================*/
 .header-project {
-   text-align: center;
+   position: fixed;
+   width: 100%;
    padding: 1.5rem;
+}
+.link {
+   display: flex;
+   align-items: center;
+   gap: 0.5rem;
+   padding-left: 1rem;
+   transition: color 0.3s;
+   .icon {
+      fill: #fff;
+      transition: color 0.3s;
+   }
+   &:hover {
+      color: $hover-color;
+      .icon {
+         fill: $hover-color;
+      }
+   }
 }
 .project {
    .container {
@@ -10,13 +28,92 @@
       align-items: flex-start;
       justify-content: space-between;
       flex-wrap: wrap;
-      gap: 2rem;
+      row-gap: 2rem;
       padding-left: 15px;
-      .project-img {
-         width: 100%;
+      .description {
+         width: 30%;
+         .title {
+            font-size: var(--biggest-font-size);
+            color: $hover-color;
+         }
+         .text {
+            margin-block: 1rem 2rem;
+            text-indent: 20px;
+         }
+         .link {
+            padding: 1rem;
+            font-size: 1.8rem;
+            .icon {
+               width: 60px;
+            }
+         }
       }
-   }
-   ul {
-      list-style: initial;
+      .project-img {
+         width: 65%;
+         img {
+            width: 100%;
+         }
+      }
+      .content {
+         .technologies {
+            .title {
+               margin-bottom: 1.5rem;
+               color: $hover-color;
+            }
+            &__list {
+               background-color: $aside-bg;
+
+               padding: 1rem;
+               padding-left: 2rem;
+               color: #000;
+               margin-bottom: 2rem;
+               .item {
+                  padding: 0.5rem;
+                  margin-block: 0.8rem;
+                  padding-left: 1.5rem;
+                  color: $text-color;
+                  position: relative;
+                  &::before {
+                     content: "";
+                     position: absolute;
+                     top: 0;
+                     left: 0;
+                     height: 100%;
+                     background-color: #fff;
+                     width: 5px;
+                  }
+               }
+            }
+         }
+         .features {
+            .title {
+               margin-bottom: 1.5rem;
+            }
+            &__list {
+               background-color: $aside-bg;
+
+               padding: 1rem;
+               padding-left: 2rem;
+               color: #000;
+               margin-bottom: 2rem;
+               .item {
+                  padding: 0.5rem;
+                  margin-block: 0.8rem;
+                  padding-left: 1.5rem;
+                  color: $text-color;
+                  position: relative;
+                  &::before {
+                     content: "";
+                     position: absolute;
+                     top: 0;
+                     left: 0;
+                     height: 100%;
+                     background-color: #fff;
+                     width: 5px;
+                  }
+               }
+            }
+         }
+      }
    }
 }

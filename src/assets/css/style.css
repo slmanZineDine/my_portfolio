@@ -598,8 +598,27 @@ textarea:focus {
 
 /*===================== PROJECT =====================*/
 .header-project {
-  text-align: center;
+  position: fixed;
+  width: 100%;
   padding: 1.5rem;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-left: 1rem;
+  transition: color 0.3s;
+}
+.link .icon {
+  fill: #fff;
+  transition: color 0.3s;
+}
+.link:hover {
+  color: #08fdd8;
+}
+.link:hover .icon {
+  fill: #08fdd8;
 }
 
 .project .container {
@@ -607,12 +626,83 @@ textarea:focus {
   align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 2rem;
+  row-gap: 2rem;
   padding-left: 15px;
 }
+.project .container .description {
+  width: 30%;
+}
+.project .container .description .title {
+  font-size: var(--biggest-font-size);
+  color: #08fdd8;
+}
+.project .container .description .text {
+  margin-block: 1rem 2rem;
+  text-indent: 20px;
+}
+.project .container .description .link {
+  padding: 1rem;
+  font-size: 1.8rem;
+}
+.project .container .description .link .icon {
+  width: 60px;
+}
 .project .container .project-img {
+  width: 65%;
+}
+.project .container .project-img img {
   width: 100%;
 }
-.project ul {
-  list-style: initial;
+.project .container .content .technologies .title {
+  margin-bottom: 1.5rem;
+  color: #08fdd8;
+}
+.project .container .content .technologies__list {
+  background-color: #181818;
+  padding: 1rem;
+  padding-left: 2rem;
+  color: #000;
+  margin-bottom: 2rem;
+}
+.project .container .content .technologies__list .item {
+  padding: 0.5rem;
+  margin-block: 0.8rem;
+  padding-left: 1.5rem;
+  color: #909096;
+  position: relative;
+}
+.project .container .content .technologies__list .item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #fff;
+  width: 5px;
+}
+.project .container .content .features .title {
+  margin-bottom: 1.5rem;
+}
+.project .container .content .features__list {
+  background-color: #181818;
+  padding: 1rem;
+  padding-left: 2rem;
+  color: #000;
+  margin-bottom: 2rem;
+}
+.project .container .content .features__list .item {
+  padding: 0.5rem;
+  margin-block: 0.8rem;
+  padding-left: 1.5rem;
+  color: #909096;
+  position: relative;
+}
+.project .container .content .features__list .item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #fff;
+  width: 5px;
 }/*# sourceMappingURL=style.css.map */
