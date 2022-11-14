@@ -1,17 +1,9 @@
 // ===================== COLORS =====================
-$n001: #fc4855;
-$n002: #0075ff;
-$n003: #6900ff;
-$n004: #e91e63;
-$n005: #009688;
-$n006: #21b0f7;
-$n007: #ff385c;
-$n008: #232733;
-
 $body-bg: #1d1d1d;
 $aside-bg: #181818;
 $text-color: #909096;
 $hover-color: #08fdd8;
+/*===================== VARIABLES =====================*/
 // ===================== FONTS SIZE =====================
 $body-font: "Poppins", sans-serif;
 :root {
@@ -21,16 +13,6 @@ $body-font: "Poppins", sans-serif;
    --normal-font-size: 0.938rem;
    --small-font-size: 0.813rem;
    --smaller-font-size: 0.75rem;
-
-   // Responsive typography
-   // @include respond-to("lg", "min") {
-   //    --biggest-font-size: 3rem;
-   //    --h2-font-size: 1.75rem;
-   //    --h3-font-size: 1.25rem;
-   //    --normal-font-size: 1rem;
-   //    --small-font-size: 0.875rem;
-   //    --smaller-font-size: 0.813rem;
-   // }
 }
 // ===================== FONT WEIGHT =====================
 $font-semi-bold: 500;

@@ -1,0 +1,13 @@
+@use "./../abstracts" as *;
+/*===================== FOOTER =====================*/
+#validation-message {
+   position: fixed;
+   bottom: 2rem;
+   right: -25rem;
+   padding: 1rem;
+   border-radius: 0.2rem;
+   transition: right 0.5s;
+   &.show {
+      right: 2rem;
+   }
+}

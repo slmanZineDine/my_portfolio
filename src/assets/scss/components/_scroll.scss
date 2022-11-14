@@ -1,0 +1,46 @@
+@use "../abstracts/" as *;
+/*=============== SCROLL UP ===============*/
+.scroll-up {
+   position: fixed;
+   background: $hover-color;
+   right: 1.5rem;
+   bottom: 1.5rem;
+   display: block;
+   width: 50px;
+   height: 50px;
+   text-align: center;
+   padding: 0.5rem;
+   border-radius: 50%;
+   z-index: $z-tooltip;
+   opacity: 0.8;
+   transition: 0.4s;
+
+   &:hover {
+      opacity: 1;
+   }
+
+   .icon {
+      font-size: 2rem;
+   }
+}
+
+/* Show Scroll Up*/
+.show-scroll {
+   bottom: 3rem;
+}
+
+/*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+   width: 0.6rem;
+   border-radius: 0.5rem;
+   background-color: hsl(45, 4%, 85%);
+
+   &-thumb {
+      background-color: hsl(45, 4%, 75%);
+      border-radius: 0.5rem;
+
+      &:hover {
+         background-color: hsl(45, 4%, 65%);
+      }
+   }
+}

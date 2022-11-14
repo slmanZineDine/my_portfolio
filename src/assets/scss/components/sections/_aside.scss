@@ -9,7 +9,7 @@
    background-color: $aside-bg;
    z-index: $z-fixed;
    overflow: hidden;
-   transition: width 0.4s;
+   transition: all 0.4s;
    .nav {
       .logo {
          padding: 1.2rem;
@@ -60,15 +60,16 @@
                border-right: 1px solid $text-color;
             }
             .social-link:nth-child(1):hover {
-               color: #0674e7;
+               color: #4267b2;
             }
             .social-link:nth-child(2):hover {
-               color: #0a66c2;
+               color: #0077b5;
             }
             .social-link:nth-child(3):hover {
                color: #f00;
             }
-            .social-link:nth-child(4):hover {
+            .social-link:nth-child(4):hover,
+            .social-link:nth-child(5):hover {
                color: #ddd;
             }
          }
@@ -79,9 +80,17 @@
 // /* SMALL */
 @media (max-width: 768px) {
    .aside {
-      width: 0;
+      left: -$aside-padding;
    }
    .aside.show {
       width: 100%;
+      left: 0;
+      background-color: #181818e9;
+   }
+   .aside .nav .logo {
+      background-color: #00000000;
+   }
+   .aside .nav .social-links .social .social-link {
+      padding: 1rem;
    }
 }

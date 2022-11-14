@@ -3,13 +3,14 @@
 @use "./base/helper";
 // COMPONENTS
 @use "./components/buttons";
-@use "./components/inputs";
 @use "./components/sections/aside";
 @use "./components/sections/hero";
 @use "./components/sections/about-me";
 @use "./components/sections/my-skills";
 @use "./components/sections/my-works";
 @use "./components/sections/contact";
+@use "./components/handle-problems";
 @use "./components/footer";
+@use "./components/scroll";
 // PAGES
 @use "./pages/project";
