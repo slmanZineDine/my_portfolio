@@ -1,2 +1,27 @@
 @use "./../abstracts" as *;
 /*===================== FOOTER =====================*/
+.footer {
+   padding-left: $aside-padding;
+   background-color: $aside-bg;
+   padding-block: 2rem;
+   text-align: center;
+   .link {
+      display: inline;
+      color: $hover-color;
+      padding: 0;
+   }
+   .heart-icon {
+      position: relative;
+      top: 5px;
+   }
+}
+.project-footer {
+   padding-left: 0;
+}
+/*=============== BREAKPOINTS ===============*/
+/* SMALL */
+@media (max-width: 768px) {
+   .footer {
+      padding-left: 0;
+   }
+}

@@ -51,27 +51,11 @@
          }
          .social {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
-            .social-link {
-               font-size: 1.5rem;
-               transition: color 0.4s;
-            }
-            .social-link:not(:last-of-type) {
-               border-right: 1px solid $text-color;
-            }
-            .social-link:nth-child(1):hover {
-               color: #4267b2;
-            }
-            .social-link:nth-child(2):hover {
-               color: #0077b5;
-            }
-            .social-link:nth-child(3):hover {
-               color: #f00;
-            }
-            .social-link:nth-child(4):hover,
-            .social-link:nth-child(5):hover {
-               color: #ddd;
-            }
+            grid-template-columns: repeat(3, minmax(30px, 1fr));
+            gap: 1rem;
+            // .social-link:not(:last-of-type) {
+            //    border-right: 1px solid $text-color;
+            // }
          }
       }
    }

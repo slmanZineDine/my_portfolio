@@ -7,7 +7,7 @@
 }
 .main {
    position: relative;
-   padding-left: calc($aside-padding);
+   padding-left: $aside-padding;
    .toggle-mobile {
       position: fixed;
       top: 1.5rem;

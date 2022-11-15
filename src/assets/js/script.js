@@ -6,6 +6,11 @@ toggleMobile.addEventListener("click", () => {
    asideBar.classList.toggle("show");
    toggleMobile.classList.toggle("close");
 });
+/*===================== REMOVE MENU MOBILE =====================*/
+const navLink = document.getElementById("links");
+links.addEventListener("click", () => {
+   asideBar.classList.toggle("show");
+});
 // ===================== INPUT FIELD EFFECT =====================
 const spans = document.querySelectorAll(".input-title");
 const inputsField = document.querySelectorAll(".input-field");

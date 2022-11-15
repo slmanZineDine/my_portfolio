@@ -242,27 +242,8 @@ textarea:focus {
 }
 .aside .nav .social-links .social {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
-}
-.aside .nav .social-links .social .social-link {
-  font-size: 1.5rem;
-  transition: color 0.4s;
-}
-.aside .nav .social-links .social .social-link:not(:last-of-type) {
-  border-right: 1px solid #909096;
-}
-.aside .nav .social-links .social .social-link:nth-child(1):hover {
-  color: #4267b2;
-}
-.aside .nav .social-links .social .social-link:nth-child(2):hover {
-  color: #0077b5;
-}
-.aside .nav .social-links .social .social-link:nth-child(3):hover {
-  color: #f00;
-}
-.aside .nav .social-links .social .social-link:nth-child(4):hover,
-.aside .nav .social-links .social .social-link:nth-child(5):hover {
-  color: #ddd;
+  grid-template-columns: repeat(3, minmax(30px, 1fr));
+  gap: 1rem;
 }
 
 /*=============== BREAKPOINTS ===============*/
@@ -347,6 +328,7 @@ textarea:focus {
 @media (max-width: 376px) {
   .hero .container .content .title {
     font-size: 3.5rem;
+    letter-spacing: -5px;
   }
   .hero .container .content .title .first-letter {
     width: 45px;
@@ -549,24 +531,55 @@ textarea:focus {
   padding: 1rem;
   border-radius: 0.2rem;
   transition: right 0.5s;
+  z-index: 51;
 }
 #validation-message.show {
   right: 2rem;
 }
 
-/*===================== FOOTER =====================*/ /*=============== SCROLL UP ===============*/
+/*===================== FOOTER =====================*/
+.footer {
+  padding-left: 240px;
+  background-color: #181818;
+  padding-block: 2rem;
+  text-align: center;
+}
+.footer .link {
+  display: inline;
+  color: #08fdd8;
+  padding: 0;
+}
+.footer .heart-icon {
+  position: relative;
+  top: 5px;
+}
+
+.project-footer {
+  padding-left: 0;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* SMALL */
+@media (max-width: 768px) {
+  .footer {
+    padding-left: 0;
+  }
+}
+/*=============== SCROLL UP ===============*/
 .scroll-up {
   position: fixed;
   background: #08fdd8;
   right: 1.5rem;
   bottom: 1.5rem;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 50px;
   height: 50px;
   text-align: center;
   padding: 0.5rem;
   border-radius: 50%;
-  z-index: 10;
+  z-index: 50;
   opacity: 0.8;
   transition: 0.4s;
 }
@@ -574,7 +587,7 @@ textarea:focus {
   opacity: 1;
 }
 .scroll-up .icon {
-  font-size: 2rem;
+  fill: #fff;
 }
 
 /* Show Scroll Up*/
@@ -600,7 +613,8 @@ textarea:focus {
 .header-project {
   position: fixed;
   width: 100%;
-  padding: 1.5rem;
+  padding: 1.3rem;
+  background-color: #181818;
 }
 
 .link {
@@ -621,68 +635,38 @@ textarea:focus {
   fill: #08fdd8;
 }
 
-.project .container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  row-gap: 2rem;
-  padding-left: 15px;
-}
-.project .container .description {
-  width: 30%;
-}
-.project .container .description .title {
-  font-size: var(--biggest-font-size);
+.project > .title {
+  text-align: center;
+  font-size: 3rem;
   color: #08fdd8;
 }
-.project .container .description .text {
-  margin-block: 1rem 2rem;
-  text-indent: 20px;
-}
-.project .container .description .link {
-  padding: 1rem;
-  font-size: 1.8rem;
-}
-.project .container .description .link .icon {
-  width: 60px;
-}
-.project .container .project-img {
-  width: 65%;
+.project > .text {
+  margin-block: 2rem 4rem;
+  text-align: center;
 }
 .project .container .project-img img {
   width: 100%;
+  min-width: 220px;
 }
-.project .container .content .technologies .title {
+.project .container .links {
+  margin-block: 2rem;
+  width: fit-content;
+}
+.project .container .links .link {
+  padding: 1rem;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+}
+.project .container .links .link .icon {
+  width: 60px;
+}
+.project .container .content .technologies .title,
+.project .container .content .features .title {
   margin-bottom: 1.5rem;
   color: #08fdd8;
 }
-.project .container .content .technologies__list {
-  background-color: #181818;
-  padding: 1rem;
-  padding-left: 2rem;
-  color: #000;
-  margin-bottom: 2rem;
-}
-.project .container .content .technologies__list .item {
-  padding: 0.5rem;
-  margin-block: 0.8rem;
-  padding-left: 1.5rem;
-  color: #909096;
-  position: relative;
-}
-.project .container .content .technologies__list .item::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background-color: #fff;
-  width: 5px;
-}
-.project .container .content .features .title {
-  margin-bottom: 1.5rem;
-}
+.project .container .content .technologies__list,
 .project .container .content .features__list {
   background-color: #181818;
   padding: 1rem;
@@ -690,19 +674,36 @@ textarea:focus {
   color: #000;
   margin-bottom: 2rem;
 }
+.project .container .content .technologies__list .item,
 .project .container .content .features__list .item {
+  position: relative;
   padding: 0.5rem;
   margin-block: 0.8rem;
-  padding-left: 1.5rem;
+  padding-left: 1.2rem;
   color: #909096;
-  position: relative;
+  line-height: 1.5;
 }
+.project .container .content .technologies__list .item::before,
 .project .container .content .features__list .item::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 0;
-  height: 100%;
+  transform: translateY(-50%);
+  height: 80%;
   background-color: #fff;
   width: 5px;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* EXTRA SMALL */
+@media (max-width: 400px) {
+  .project > .title {
+    font-size: 2.5rem;
+    padding-inline: 15px;
+  }
+  .project > .text {
+    font-size: var(--normal-font-size);
+    padding-inline: 15px;
+  }
 }/*# sourceMappingURL=style.css.map */

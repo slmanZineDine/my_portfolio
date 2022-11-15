@@ -3,7 +3,8 @@
 .header-project {
    position: fixed;
    width: 100%;
-   padding: 1.5rem;
+   padding: 1.3rem;
+   background-color: $aside-bg;
 }
 .link {
    display: flex;
@@ -23,39 +24,39 @@
    }
 }
 .project {
+   > .title {
+      text-align: center;
+      font-size: 3rem;
+      color: $hover-color;
+   }
+   > .text {
+      margin-block: 2rem 4rem;
+      text-align: center;
+   }
    .container {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      row-gap: 2rem;
-      padding-left: 15px;
-      .description {
-         width: 30%;
-         .title {
-            font-size: var(--biggest-font-size);
-            color: $hover-color;
+      .project-img {
+         img {
+            width: 100%;
+            min-width: 220px;
          }
-         .text {
-            margin-block: 1rem 2rem;
-            text-indent: 20px;
-         }
+      }
+
+      .links {
+         margin-block: 2rem;
+         width: fit-content;
          .link {
             padding: 1rem;
             font-size: 1.8rem;
+            display: flex;
+            align-items: center;
             .icon {
                width: 60px;
             }
          }
       }
-      .project-img {
-         width: 65%;
-         img {
-            width: 100%;
-         }
-      }
       .content {
-         .technologies {
+         .technologies,
+         .features {
             .title {
                margin-bottom: 1.5rem;
                color: $hover-color;
@@ -68,46 +69,19 @@
                color: #000;
                margin-bottom: 2rem;
                .item {
+                  position: relative;
                   padding: 0.5rem;
                   margin-block: 0.8rem;
-                  padding-left: 1.5rem;
+                  padding-left: 1.2rem;
                   color: $text-color;
-                  position: relative;
+                  line-height: 1.5;
                   &::before {
                      content: "";
                      position: absolute;
-                     top: 0;
+                     top: 50%;
                      left: 0;
-                     height: 100%;
-                     background-color: #fff;
-                     width: 5px;
-                  }
-               }
-            }
-         }
-         .features {
-            .title {
-               margin-bottom: 1.5rem;
-            }
-            &__list {
-               background-color: $aside-bg;
-
-               padding: 1rem;
-               padding-left: 2rem;
-               color: #000;
-               margin-bottom: 2rem;
-               .item {
-                  padding: 0.5rem;
-                  margin-block: 0.8rem;
-                  padding-left: 1.5rem;
-                  color: $text-color;
-                  position: relative;
-                  &::before {
-                     content: "";
-                     position: absolute;
-                     top: 0;
-                     left: 0;
-                     height: 100%;
+                     transform: translateY(-50%);
+                     height: 80%;
                      background-color: #fff;
                      width: 5px;
                   }
@@ -115,5 +89,17 @@
             }
          }
       }
+   }
+}
+/*=============== BREAKPOINTS ===============*/
+/* EXTRA SMALL */
+@media (max-width: 400px) {
+   .project > .title {
+      font-size: 2.5rem;
+      padding-inline: 15px;
+   }
+   .project > .text {
+      font-size: var(--normal-font-size);
+      padding-inline: 15px;
    }
 }
