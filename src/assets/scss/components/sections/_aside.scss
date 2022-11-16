@@ -4,12 +4,16 @@
    position: fixed;
    left: 0;
    width: $aside-padding;
-   min-height: 100vh;
+   height: 100vh;
    text-align: center;
    background-color: $aside-bg;
    z-index: $z-fixed;
-   overflow: hidden;
+   overflow-x: hidden;
+   overflow-y: auto;
    transition: all 0.4s;
+   &::-webkit-scrollbar {
+      width: 0;
+   }
    .nav {
       .logo {
          padding: 1.2rem;
@@ -53,15 +57,20 @@
             display: grid;
             grid-template-columns: repeat(3, minmax(30px, 1fr));
             gap: 1rem;
-            // .social-link:not(:last-of-type) {
-            //    border-right: 1px solid $text-color;
-            // }
+            padding-inline: 2rem;
+            padding-block: 0.5rem 2rem;
+            .social-link {
+               transition: transform 0.3s;
+               &:hover {
+                  transform: scale(1.2);
+               }
+            }
          }
       }
    }
 }
 /*=============== BREAKPOINTS ===============*/
-// /* SMALL */
+/* SMALL */
 @media (max-width: 768px) {
    .aside {
       left: -$aside-padding;
@@ -74,7 +83,18 @@
    .aside .nav .logo {
       background-color: #00000000;
    }
-   .aside .nav .social-links .social .social-link {
-      padding: 1rem;
+   .aside .nav .links .item .link {
+      padding: 1.5rem;
+   }
+   .aside .nav .social-links .social {
+      grid-template-columns: repeat(6, minmax(50px, 1fr));
+      gap: 0.5rem;
+   }
+}
+// /* EXTRA SMALL */
+@media (max-width: 400px) {
+   .aside .nav .social-links .social {
+      grid-template-columns: repeat(3, minmax(50px, 1fr));
+      gap: 1rem;
    }
 }

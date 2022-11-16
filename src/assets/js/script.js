@@ -1,16 +1,13 @@
-// ===================== MOBILE TOGGLE =====================
+// ===================== MOBILE TOGGLE MENU =====================
 const toggleMobile = document.getElementById("toggle-mobile");
 const asideBar = document.getElementById("aside");
-
-toggleMobile.addEventListener("click", () => {
+const navLink = document.getElementById("links");
+const toggleMenu = () => {
    asideBar.classList.toggle("show");
    toggleMobile.classList.toggle("close");
-});
-/*===================== REMOVE MENU MOBILE =====================*/
-const navLink = document.getElementById("links");
-links.addEventListener("click", () => {
-   asideBar.classList.toggle("show");
-});
+};
+toggleMobile.addEventListener("click", toggleMenu); // Make it in mobile
+links.addEventListener("click", toggleMenu); // Remove when click any navLink
 // ===================== INPUT FIELD EFFECT =====================
 const spans = document.querySelectorAll(".input-title");
 const inputsField = document.querySelectorAll(".input-field");

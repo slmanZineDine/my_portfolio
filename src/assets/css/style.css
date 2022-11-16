@@ -200,12 +200,16 @@ textarea:focus {
   position: fixed;
   left: 0;
   width: 240px;
-  min-height: 100vh;
+  height: 100vh;
   text-align: center;
   background-color: #181818;
   z-index: 100;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   transition: all 0.4s;
+}
+.aside::-webkit-scrollbar {
+  width: 0;
 }
 .aside .nav .logo {
   padding: 1.2rem;
@@ -244,9 +248,18 @@ textarea:focus {
   display: grid;
   grid-template-columns: repeat(3, minmax(30px, 1fr));
   gap: 1rem;
+  padding-inline: 2rem;
+  padding-block: 0.5rem 2rem;
+}
+.aside .nav .social-links .social .social-link {
+  transition: transform 0.3s;
+}
+.aside .nav .social-links .social .social-link:hover {
+  transform: scale(1.2);
 }
 
 /*=============== BREAKPOINTS ===============*/
+/* SMALL */
 @media (max-width: 768px) {
   .aside {
     left: -240px;
@@ -259,8 +272,18 @@ textarea:focus {
   .aside .nav .logo {
     background-color: rgba(0, 0, 0, 0);
   }
-  .aside .nav .social-links .social .social-link {
-    padding: 1rem;
+  .aside .nav .links .item .link {
+    padding: 1.5rem;
+  }
+  .aside .nav .social-links .social {
+    grid-template-columns: repeat(6, minmax(50px, 1fr));
+    gap: 0.5rem;
+  }
+}
+@media (max-width: 400px) {
+  .aside .nav .social-links .social {
+    grid-template-columns: repeat(3, minmax(50px, 1fr));
+    gap: 1rem;
   }
 }
 /*===================== HERO =====================*/
