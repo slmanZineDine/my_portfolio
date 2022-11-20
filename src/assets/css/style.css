@@ -658,14 +658,15 @@ textarea:focus {
   fill: #08fdd8;
 }
 
-.project > .title {
+.project .container > .title {
   text-align: center;
   font-size: 3rem;
   color: #08fdd8;
 }
-.project > .text {
+.project .container > .text {
   margin-block: 2rem 4rem;
   text-align: center;
+  line-height: 1.5;
 }
 .project .container .project-img img {
   width: 100%;
@@ -721,11 +722,11 @@ textarea:focus {
 /*=============== BREAKPOINTS ===============*/
 /* EXTRA SMALL */
 @media (max-width: 400px) {
-  .project > .title {
-    font-size: 2.5rem;
+  .project .container > .title {
+    font-size: 2.3rem;
     padding-inline: 15px;
   }
-  .project > .text {
+  .project .container > .text {
     font-size: var(--normal-font-size);
     padding-inline: 15px;
   }
