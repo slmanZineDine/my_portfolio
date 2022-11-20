@@ -417,14 +417,13 @@ textarea:focus {
   transform: translate(-50%, -50%);
   transition: all 0.3s;
   color: #fff;
-  font-size: var(--h3-font-size);
+  font-size: var(--h2-font-size);
   font-weight: 600;
   letter-spacing: 2px;
   z-index: 1;
 }
 .my-works .works .box .image .preview:hover {
   text-decoration: underline;
-  font-size: var(--h2-font-size);
   color: #08fdd8;
 }
 .my-works .works .box .image::after {

@@ -22,13 +22,12 @@
                transform: translate(-50%, -50%);
                transition: all 0.3s;
                color: #fff;
-               font-size: var(--h3-font-size);
+               font-size: var(--h2-font-size);
                font-weight: $font-bold;
                letter-spacing: 2px;
                z-index: $z-normal;
                &:hover {
                   text-decoration: underline;
-                  font-size: var(--h2-font-size);
                   color: $hover-color;
                }
             }
