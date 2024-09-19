@@ -72,8 +72,11 @@ const checkField = (message, color) => {
    }, 4000);
 };
 form.addEventListener("submit", sendEmail);
+
 // ===================== THE YEAR =====================
 const theYear = document.getElementById("year");
 const currentYear = new Date();
 
-theYear.textContent = currentYear.getFullYear()
+theYear.textContent = currentYear.getFullYear();
+
+// ===================== MY AGE =====================
