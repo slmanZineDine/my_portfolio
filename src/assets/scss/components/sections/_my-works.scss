@@ -12,8 +12,11 @@
          .image {
             position: relative;
             overflow: hidden;
+            height: 150px;
             img {
                vertical-align: middle;
+               height: 100%;
+               width: 100%;
             }
             .preview {
                position: absolute;

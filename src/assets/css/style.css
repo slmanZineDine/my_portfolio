@@ -406,9 +406,12 @@ textarea:focus {
 .my-works .works .box .image {
   position: relative;
   overflow: hidden;
+  height: 150px;
 }
 .my-works .works .box .image img {
   vertical-align: middle;
+  height: 100%;
+  width: 100%;
 }
 .my-works .works .box .image .preview {
   position: absolute;
